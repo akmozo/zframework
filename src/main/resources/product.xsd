@@ -1,0 +1,20 @@
+<xsd:schema 
+    version="1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    
+    xmlns:p="http://www.akmozo.com/2016/Product" 
+    targetNamespace="http://www.akmozo.com/2016/Product"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+    
+    <xsd:element name="product" type="p:Product"/>
+
+    <xsd:complexType name="Product">
+        <xsd:sequence>
+            <xsd:element name="description" type="xsd:string"/>
+            <xsd:element name="price" type="xsd:decimal"/>
+        </xsd:sequence>
+        <xsd:attribute name="num" type="xsd:positiveInteger" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>
